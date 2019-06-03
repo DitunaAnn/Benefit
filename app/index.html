@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Benefit cosmetics</title>
+	<script src="js/libs.min.js"></script>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header>
+		<div class="topheader">
+			<div class="container">
+				<div class="topheader-grid">
+					<div class="topheader-grid__col">
+						<div class="topheader-grid__region">
+							<p>Ваш регион:</p>
+						</div>
+						<div class="topheader-grid__select">
+							<select name="region" id="input-select">
+								<option value="Николаев">Николаев</option>
+								<option value="Одесса">Одесса</option>
+								<option value="Днепр">Днепр</option>
+								<option value="Чернигов">Чернигов</option>
+								<option value="Харьков">Харьков</option>
+								<option value="Житомир">Житомир</option>
+								<option value="Полтава">Полтава</option>
+								<option value="Херсон">Херсон</option>
+								<option value="Киев">Киев</option>
+								<option value="Запорожье">Запорожье</option>
+								<option value="Луганск">Луганск</option>
+								<option value="Донецк">Донецк</option>
+								<option value="Винница">Винница</option>
+								<option value="Кировоград">Кировоград</option>
+								<option value="Суммы">Суммы</option>
+								<option value="Львов">Львов</option>
+								<option value="Черкасы">Черкасы</option>
+								<option value="Хмельницк">Хмельницк</option>
+								<option value="Волынь">Волынь</option>
+								<option value="Ровно">Ровно</option>
+								<option value="Ивано-франковск">Ивано-франковск</option>
+								<option value="Тернополь">Тернополь</option>
+								<option value="Закарпатье">Закарпатье</option>
+								<option value="Черновцы">Черновцы</option>
+							</select>
+						</div>
+					</div>
+					<div class="topheader-grid__col">
+						<a  class="topheader-grid__link" href="#">Шоурум</a>
+						<a class="topheader-grid__link" href="#">Контакты</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header">
+			<div class="container">	
+				<div class="header-grid">
+					<div class="header-grid__col">
+						<div class="nav-toggle">
+							<i class=" nav-toggle__open fas fa-bars"></i>
+							<i class=" nav-toggle__close fas fa-times"></i>
+						</div>
+						<div class="header-grid__contacts">
+							<div class="header-grid__phone">+7 (495) 721-64-63 </div>
+							<div class="header-grid__worktime">
+								<p>(пн-пт - 10:00-19:00</p>
+								<p>сб-вс - 11:00-17:00)</p>
+							</div>
+							<a class="header-grid__link" href="#">Заказать звонок</a>
+						</div>
+					</div>
+					<div class="header-grid__col">
+						<div class="header-grid__logo">
+							<a class="logo" href="#">
+								<img src="images/logo.png" alt="Benefit">
+								<p class="logo-text">cosmetics</p>
+							</a>
+						</div>
+						<div class="header-grid__contacts-mobile">
+							<div class="header-grid__phone">+7 (495) 721-64-63 </div>
+							<a class="header-grid__link" href="#">Заказать звонок</a>
+						</div>
+					</div>
+					<div class="header-grid__col">
+						<a href="#" class="header-grid__items">
+							<div class="header-grid__icons icon-1"></div>
+							<div class="header-grid__text">
+								<p>Поиск</p>
+							</div>
+						</a>
+						<a href="#" class="header-grid__items">
+							<div class="header-grid__icon icon-2"></div>
+							<div class="header-grid__text">
+								<p>Сравнение</p>
+							</div>
+						</a>
+						<a class="header-grid__items">
+							<div class="header-grid__icon icon-3"></div>
+							<div class="header-grid__text">
+								<p>Корзина</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="nav">
+			<div class="container">
+				<ul class="nav-list">
+					<li><a class="nav-list__link"  href="#anchor1">Макияж</a></li>
+					<li><a class="nav-list__link" href="#anchor2">Ногти</a></li>
+					<li><a class="nav-list__link" href="#anchor3">волосы</a></li>
+					<li><a class="nav-list__link" href="#anchor4">парфюмерия</a></li>
+					<li><a class="nav-list__link" href="#anchor5">лицо</a></li>
+					<li><a class="nav-list__link" href="#anchor6">тело и ванна</a></li>
+					<li><a class="nav-list__link" href="#anchor7">мужчинам</a></li>
+					<li><a class="nav-list__link" href="#anchor8">аксессуары</a></li>
+					<li><a class="nav-list__link" href="#anchor9">health and care</a></li>
+					<li><a class="nav-list__link" href="#anchor10">подарки</a></li>
+					<li><a class="nav-list__link" href="#anchor11">бренды</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<div class="preview-blocks">
+			<div class="preview-block">
+				<div class="preview">
+					<img class="preview-grid__img-mobile" src="images/banner-tablet-bg.png" alt="banner">
+					<img class="preview-grid__img" src="images/banner-bg.png" alt="banner">
+					<div class="container">
+						<h1 class="preview-grid__title">
+							<span>Retin A</span>
+							мульти-кислотная ремодулирующая линия
+						</h1>
+					</div>
+				</div>
+				<div class="preview">
+					<img class="preview-grid__img-mobile" src="images/banner-tablet-bg.png" alt="banner">
+					<img class="preview-grid__img" src="images/banner-bg.png" alt="banner">
+					<div class="container">
+						<h1 class="preview-grid__title">
+							<span>Retin A</span>
+							мульти-кислотная ремодулирующая линия
+						</h1>
+					</div>
+				</div>
+				<div class="preview">
+					<img class="preview-grid__img-mobile" src="images/banner-tablet-bg.png" alt="banner">
+					<img class="preview-grid__img" src="images/banner-bg.png" alt="banner">
+					<div class="container">
+						<h1 class="preview-grid__title">
+							<span>Retin A</span>
+							мульти-кислотная ремодулирующая линия
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="products-block">
+			<div class="products" id="anchor1">
+				<div class="container">
+					<div class="line">
+						<h3 class="products__title title">Самое популярное</h3>
+					</div>
+					<div class="products-grid">
+						<div class="products-grid__col products-grid__col-mobile" id="anchor1">
+							<div class="products-grid__col-width">
+								<div class="products-grid__items">
+									<div class="products-grid__items-title">
+										<p>Макияж</p>
+									</div>
+									<div class="products-grid__image">
+										<div class="discount">
+											<p>%</p>
+											<p>Скидка</p>
+										</div>
+										<img src="images/product-1.png" alt="makeup">
+									</div>
+									<div class="products-grid__text">
+										<p class="products-grid__text-hidden">Givenchy Le Rouge*</p>
+										<p class="products-grid__text-hidden">Помада для губ</p>
+										<p class="products-grid__text-mobile">Givenchy Le Rouge* Помада для губ</p>
+									</div>
+									<ul class="products-grid__list">
+										<li>
+											<p>бренд</p>
+											<p class="products-grid__list-brand">Cezares</p>
+										</li>
+										<li>
+											<p>коллекция</p>
+											<p class="products-grid__list-brand">GIUBILEO</p>
+										</li>
+										<li>
+											<p>страна</p>
+											<p class="products-grid__list-brand">Италия</p>
+										</li>
+									</ul>
+								</div>
+								<div class="products-grid__items-counter">
+									<p>Количество</p>
+									<div class="products-grid__items-count">
+										<p>-</p>
+										<p class="products-grid__items-count_border">1</p>
+										<p>+</p>
+									</div>
+								</div>
+								<div class="products-grid__items-price">
+									<div class="products-grid__items-text">
+										<p class="products-grid__items-text_discount">1 100грн</p>
+										<span>900грн</span>
+									</div>
+									<a href="#" class="products-grid__items-basket">
+										<p class="products-grid__basket">в корзину</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="products-grid__col" id="anchor6">
+							<div class="products-grid__col-width">
+								<div class="products-grid__items">
+									<div class="products-grid__items-title">
+										<p>Тело и ванна</p>
+									</div>
+									<div class="products-grid__image">
+										<img src="images/product-2.png" alt="bath">
+									</div>
+									<div class="products-grid__text">
+										<p>Натуральное масло "Манго"</p>
+									</div>
+									<ul class="products-grid__list">
+										<li>
+											<p>бренд</p>
+											<p class="products-grid__list-brand">Cezares</p>
+										</li>
+										<li>
+											<p>коллекция</p>
+											<p class="products-grid__list-brand">GIUBILEO</p>
+										</li>
+										<li>
+											<p>страна</p>
+											<p class="products-grid__list-brand">Италия</p>
+										</li>
+									</ul>
+								</div>
+								<div class="products-grid__items-counter">
+									<p>Количество</p>
+									<div class="products-grid__items-count">
+										<p>-</p>
+										<p class="products-grid__items-count_border">1</p>
+										<p>+</p>
+									</div>
+								</div>
+								<div class="products-grid__items-price">
+									<div class="products-grid__items-text products-grid__items-text-mobile">
+										<p>97грн</p>
+									</div>
+									<div class="products-grid__items-text-mango products-grid__items-text">
+										<p class="products-grid__items-text_discount-mango">100грн</p>
+										<p class="products-grid__items-text-mango-disc">47грн</p>
+									</div>
+									<a href="#"  class="products-grid__items-basket">
+										<p class="products-grid__basket">в корзину</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="products-grid__col products-grid__col-line" id="anchor3">
+							<div class="products-grid__col-width">
+								<div class="products-grid__items">
+									<div class="products-grid__items-title">
+										<p>Волосы</p>
+									</div>
+									<div class="products-grid__image">
+										<img src="images/product-3.png" alt="hair">
+									</div>
+									<div class="products-grid__text">
+										<p>Аюрведический шампунь из индийских трав «Comex»</p>
+									</div>
+									<ul class="products-grid__list">
+										<li>
+											<p>бренд</p>
+											<p class="products-grid__list-brand">Cezares</p>
+										</li>
+										<li>
+											<p>коллекция</p>
+											<p class="products-grid__list-brand">GIUBILEO</p>
+										</li>
+										<li>
+											<p>страна</p>
+											<p class="products-grid__list-brand">Италия</p>
+										</li>
+									</ul>
+								</div>
+								<div class="products-grid__items-counter">
+									<p>Количество</p>
+									<div class="products-grid__items-count">
+										<p>-</p>
+										<p class="products-grid__items-count_border">1</p>
+										<p>+</p>
+									</div>
+								</div>
+								<div class="products-grid__items-price">
+									<div class="products-grid__items-text">
+										<p>62грн</p>
+									</div>
+									<a href="#" class="products-grid__items-basket">
+										<p class="products-grid__basket">в корзину</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="products-grid__col products-grid__col-hidden" id="anchor2">
+							<div class="products-grid__items">
+								<div class="products-grid__items-title">
+									<p>Ногти</p>
+								</div>
+								<div class="products-grid__image">
+									<img src="images/product-4.png" alt="nails">
+								</div>
+								<div class="products-grid__text">
+									<p>Лак для ногтей</p>
+								</div>
+							</div>
+							<div class="products-grid__items-price">
+								<div class="products-grid__items-text">
+									<p>132 грн</p>
+								</div>
+								<a href="#" class="products-grid__items-basket">
+									<p class="products-grid__basket">в корзину</p>
+								</a>
+							</div>
+						</div>
+						<div class="products-grid__col products-grid__col-line" id="anchor5">
+							<div class="products-grid__col-width">
+								<div class="products-grid__items">
+									<div class="products-grid__items-title">
+										<p>Лицо</p>
+									</div>
+									<div class="products-grid__image">
+										<img src="images/product-5.png" alt="face">
+									</div>
+									<div class="products-grid__text">
+										<p>Маска для лица "3 глины и морские водоросли"</p>
+									</div>
+									<ul class="products-grid__list">
+										<li>
+											<p>бренд</p>
+											<p class="products-grid__list-brand">Cezares</p>
+										</li>
+										<li>
+											<p>коллекция</p>
+											<p class="products-grid__list-brand">GIUBILEO</p>
+										</li>
+										<li>
+											<p>страна</p>
+											<p class="products-grid__list-brand">Италия</p>
+										</li>
+									</ul>
+								</div>
+								<div class="products-grid__items-counter">
+									<p>Количество</p>
+									<div class="products-grid__items-count">
+										<p>-</p>
+										<p class="products-grid__items-count_border">1</p>
+										<p>+</p>
+									</div>
+								</div>
+								<div class="products-grid__items-price">
+									<div class="products-grid__items-text">
+										<p>150грн</p>
+									</div>
+									<a href="#" class="products-grid__items-basket">
+										<p class="products-grid__basket">в корзину</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="products-grid__col products-grid__col-hidden">
+							<div class="products-grid__items">
+								<div class="products-grid__items-title">
+									<p>Макияж</p>
+								</div>
+								<div class="products-grid__image">
+									<div class="discount">
+										<p>%</p>
+										<p>Скидка</p>
+									</div>
+									<img src="images/product-1.png" alt="makeup">
+								</div>
+								<div class="products-grid__text">
+									<p class="products-grid__text-hidden">Givenchy Le Rouge*</p>
+									<p class="products-grid__text-hidden">Помада для губ</p>
+									<p class="products-grid__text-mobile">Givenchy Le Rouge* Помада для губ</p>
+								</div>
+							</div>
+							<div class="products-grid__items-price">
+								<div class="products-grid__items-text">
+									<p class="products-grid__items-text_discount">1 100грн</p>
+									<span>900грн</span>
+								</div>
+								<a href="#" class="products-grid__items-basket">
+									<p class="products-grid__basket">в корзину</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="brands-block">
+			<div class="brands">
+				<div class="container">
+					<div class="line">
+						<h3 class="brands__title title">Бренды нашего магазина</h3>
+					</div>
+					<div class="brands-grid">
+						<div class="brands-grid__col">
+							<div class="brands-grid__items">
+								<img src="images/brand-1.png" alt="doliva">
+							</div>
+						</div>
+						<div class="brands-grid__col">
+							<div class="brands-grid__items">
+								<img src="images/brand-2.png" alt="naris">
+							</div>
+						</div>
+						<div class="brands-grid__col">
+							<div class="brands-grid__items">
+								<img src="images/brand-3.png" alt="dashing DIVA">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="brands-line"></div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="contact">
+			<div class="container">
+				<div class="contact-grid">
+					<div class="contact-grid__col">
+						<ul class="contact-grid__list">
+							<li><a>макияж</a></li>
+							<li><a>ногтиволосы</a></li>
+							<li><a>парфюмерия</a></li>
+							<li><a>лицо</a></li>
+							<li><a>тело и ванна</a></li>
+							<li><a>мужчинам</a></li>
+						</ul>
+					</div>
+					<div class="contact-grid__col">
+						<ul class="contact-grid__list">
+							<li><a>аксессуары</a></li>
+							<li><a>helth and care</a></li>
+							<li><a>подарки</a></li>
+							<li><a>бренды</a></li>
+						</ul>
+					</div>
+					<div class="contact-grid__col">
+						<ul class="contact-grid__contact-list">
+							<li><a>О компании</a></li>
+							<li><a>Бренды</a></li>
+							<li><a>Оплата и доставка</a></li>
+							<li><a>Возврат и обмен</a></li>
+							<li><a>Шоурум</a></li>
+							<li><a>Контакты</a></li>
+						</ul>
+					</div>
+					<div class="contact-grid__col">
+						<div class="contact-grid__items">
+							<div class="contact-grid__phone">+3 (095) 721-64-63</div>
+							<div class="contact-grid__worktime">
+								<p>(пн-пт - 10:00-19:00</p>
+								<p>сб-вс - 11:00-17:00)</p>
+							</div>
+						</div>
+						<div class="contact-grid__button">
+							<a class="contact-grid__btn" href="#">Заказать звонок</a>
+						</div>
+					</div>
+					<div class="contact-grid__col">
+						<div class="contact-grid__pays">
+							<div class="contact-grid__pay">
+								<p>Мы принимаем любой способ оплаты</p>
+							</div>
+							<div class="contact-grid__payment">
+								<a href="#"><img src="images/pay-1.png" alt="VISA"></a>
+								<a href="#"><img src="images/pay-2.png" alt="MasterCard"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lowfooter">
+			<div class="container">
+				<div class="lowfooter__logo">
+					<a class="logo" href="#">
+						<img src="images/logo.png" alt="Benefit">
+						<p class="logo-text">cosmetics</p>
+					</a>
+				</div>
+				<div class="lowfooter__text">
+					<p>
+						&copy; 2013-2017 «Benefit» — интернет-магазин косметики email: 
+						<a href="#">zakaz.cezares.ru</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer-mobile">
+			<div class="container">
+				<div class="footer-mobile-grid">
+					<div class="footer-mobile-grid__col">
+						<div class="lowfooter__logo">
+							<a class="logo" href="#">
+								<img src="images/logo.png" alt="Benefit">
+								<p class="logo-text">cosmetics</p>
+							</a>
+						</div>
+					</div>
+					<div class="footer-mobile-grid__col">
+						<div class="footer-mobile-grid__items">
+							<div class="footer-mobile-grid__nav">
+								<p>разделы сайта</p>
+							</div>
+							<div class="footer-mobile-grid__list">
+								<ul class="contact-grid__list">
+									<li><a>макияж</a></li>
+									<li><a>ногтиволосы</a></li>
+									<li><a>парфюмерия</a></li>
+									<li><a>лицо</a></li>
+									<li><a>тело и ванна</a></li>
+									<li><a>мужчинам</a></li>
+									<li><a>аксессуары</a></li>
+									<li><a>helth and care</a></li>
+									<li><a>подарки</a></li>
+									<li><a>бренды</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer-mobile-grid__col">
+						<div class="contact-grid__pays">
+							<div class="contact-grid__pay">
+								<p>Мы принимаем</p>
+							</div>
+							<div class="contact-grid__payment">
+								<a href="#"><img src="images/pay-1.png" alt="VISA"></a>
+								<a href="#"><img src="images/pay-2.png" alt="MasterCard"></a>
+							</div>
+						</div>
+					</div>
+					<div class="footer-mobile-grid__col">
+						<div class="footer-mobile-grid__contacts">
+							<div class="footer-mobile-grid__region">
+								<p>Ваш регион:</p>
+								<a href="#" class="region">Николаев</a>
+							</div>
+							<div class="contact-grid__items">
+								<a href="#" class="contact-grid__phone">+3 (095) 721-64-63</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer-mobile-grid__col">
+						<div class="lowfooter__text">
+							<p>&copy; 2013-2017</p>
+							<p>«Benefit» — интернет-магазин</p>
+							<p>косметики</p>
+							<p>email: <a href="#">zakaz.cezares.ru</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+</html>

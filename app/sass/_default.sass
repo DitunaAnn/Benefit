@@ -1,0 +1,95 @@
+// ============================
+// RESETS
+// ============================
+table, thead, tbody, tfoot, tr, th, td
+	margin: 0
+	padding: 0
+	border: none
+	border-collapse: inherit
+	border-spacing: 0
+	border-color: inherit
+	vertical-align: inherit
+	font-weight: inherit
+	-webkit-border-horizontal-spacing: 0
+	-webkit-border-vertical-spacing: 0
+
+*, *:before, *:after
+	margin: 0
+	padding: 0
+
+input
+	border-radius: 0 
+	box-shadow: none !important
+
+ul, ol
+	list-style-type: none
+
+a
+	text-decoration: none
+	cursor: pointer
+
+html
+	-webkit-text-size-adjust: 100%
+	color: $mainC2
+
+body 
+	background-color: #f9f9f9
+
+
+input:focus,
+label:focus,
+textarea:focus,
+select:focus,
+option:focus,
+button:focus,
+a:focus
+	outline: none
+
+*, *:before, *:after, input, textarea, button, select
+	box-sizing: border-box
+
+.slick-slide:focus
+	outline: none
+
+.slick-arrow
+	border: none
+	font-size: 0
+	position: absolute
+	top: calc(50% - 30px/2)
+	cursor: pointer
+	z-index: 1
+	color: $mainC2
+	transition: .3s
+	&:before
+		@include flex($jc: center, $ai: center)
+		width: 15px
+		height: 29px
+		position: absolute
+		font-family: "FontAwesome"
+		font-weight: 900
+		font-size: 25px
+	&:hover
+		color: $mainC1
+
+.slick-arrow.slick-prev:before
+	content: "\f104"
+
+.slick-arrow.slick-next:before
+	content: "\f105"
+
+.slick-arrow.slick-prev
+	left: 40px
+
+.slick-arrow.slick-next
+	right: 62px
+
+.line
+	border-bottom: 1px solid #dcdedd
+
+.title
+	font-family: Roboto
+	font-weight: 100
+	font-size: 20px
+	line-height: 60px
+	border-bottom: 1px solid #000
+	color: #222222

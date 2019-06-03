@@ -1,0 +1,887 @@
+@import "./_options"
+@import "./_default"
+@import "./_font"
+
+// ============================
+// MAIN CODE START
+// ============================
+
+
+
+.container
+	width: 100%
+	max-width: nth($mediaBp, 1)
+	padding:
+		left: 10px
+		right: 10px
+	margin:
+		left: auto
+		right: auto
+
+.nav
+	padding: 20px 0
+	border-top: 1px solid #656969
+	border-bottom: 2px solid $mainC3
+	&-list
+		@include flex($jc: space-between, $ai: center)
+		li + li
+			margin-left: 75px
+		&__link
+			font-size: 18px
+			font-family: "BebasNeue"
+			font-weight: normal
+			text-transform: uppercase
+			color: #2b2b2b
+			transition: 0.5s
+			&:hover
+				color: $mainC1
+	&-toggle
+		@include flex($jc: center, $ai: center)
+		display: none
+		width: 30px
+		height: 25px
+		cursor: pointer
+		font-size: 29px
+		color: #000
+
+		&__close
+			display: none
+		&_active &__close
+			display: inline-block
+		&_active &__open
+			display: none
+
+.topheader
+	padding: 5px 0 10px
+	background-color: #000
+	color: rgb(160, 160, 160)
+	font-family: Verdana
+	font-weight: normal
+	font-size: 13px
+	&-grid
+		@include flex($jc: space-between, $ai: center)
+		&__col
+			@include flex($jc: space-between, $ai: center)
+			.topheader-grid__link + .topheader-grid__link
+				margin-left: 35px
+			.topheader-grid__link
+				color: rgb(160, 160, 160)
+				transition: .3s
+				&:hover
+					color: $mainC1
+		&__select
+			position: relative
+			display: inline-block
+			select
+				border: none
+				background-color: #000
+				color: #fff
+				-webkit-appearance: button
+				cursor: pointer
+				font-size: inherit
+				padding: 5px
+
+.topheader-grid__select:after
+	position: absolute
+	pointer-events: none
+	font-family: "FontAwesome"
+	font-weight: 900
+	content: "\f078"
+	font-size: 13px
+	right: 30px
+	top: calc(50% - 13px/2)
+	color: #808080
+
+.header
+	padding: 10px 0 0
+	&-grid
+		@include flex($jc: space-between, $ai: center)
+		padding-bottom: 10px
+		&__col:nth-child(1)
+			@include flex($jc: space-between, $ai: center)
+		&__contacts
+			@include flex($jc: space-between, $ai: center)
+			&-mobile
+				display: none
+		&__col:nth-child(3)
+			@include flex($jc: flex-end, $ai: flex-end)
+		&__col
+			width: calc(100% / 3)
+		&__phone
+			font-family: Arial
+			font-weight: normal
+			font-size: 18px
+			color: #000
+		&__worktime
+			font-family: Verdana
+			font-weight: normal
+			font-size: 11px
+			color: #a0a0a0
+			margin-left: 20px
+		&__link
+			font-family: Arial
+			font-weight: normal
+			font-size: 14px
+			color: $mainC2
+			margin-left: 60px
+			&:hover
+				color: $mainC1
+		&__logo
+			@include flex($jc: center, $ai: center)
+		&__icon
+			width: 43px
+			height: 43px
+			background-color: $mainC1
+			color: #fff
+			border-radius: 50%
+			@include flex($jc: center, $ai: center)
+			font-size: 19px
+			border: 1px solid $mainC1
+			transition: .3s
+		&__icons
+			color: #000
+			@include flex($jc: center, $ai: center)
+			font-size: 19px
+			margin-bottom: 10px
+			transition: .3s
+		&__items
+			@include flex($jc: center, $ai: center)
+			flex-direction: column
+			transition: .3s
+			&:hover
+				.header-grid__text
+					color: $mainC1
+				.header-grid__icon
+					background-color: #fff
+					color: $mainC1
+				.header-grid__icons
+					color: $mainC1
+
+
+		.header-grid__items + .header-grid__items
+			margin-left: 20px
+		&__text
+			color: #a0a0a0
+			font-family: Verdana
+			font-weight: normal
+			font-size: 12px
+			transition: .3s
+			
+
+.icon-1:before
+	font-family: "FontAwesome"
+	font-weight: 900
+	content: "\f002"
+	
+
+
+.icon-2:before
+	content: "\f24e"
+	font-family: "FontAwesome"
+	font-weight: 900
+
+.icon-3:before
+	content: "\f291"
+	font-family: "FontAwesome"
+	font-weight: 900
+
+.preview
+	
+	position: relative
+	&-blocks
+		background-color: #f9f9f9
+		padding: 30px 85px 0
+	&-block
+		background-color: #fff
+		padding: 30px 40px
+	&-grid
+		&__title
+			position: absolute
+			text-align: left
+			max-width: 415px
+			font-size: 48px
+			font-family: "BebasNeue"
+			font-weight: normal
+			text-transform: uppercase
+			color: #000
+			top: calc(50% - 174px/2)
+			right: 30px
+			display: flex
+			flex-direction: column
+		&__img
+			max-width: 100%
+			&-mobile
+				display: none
+
+.slick
+	&-dots
+		margin: 10px auto
+		width: 60px
+		position: absolute
+		bottom: 30px
+		left: calc(50% - 60px/2)
+		@include flex($jc: space-between, $ai: center)
+		li
+			button
+				font-size: 0
+				border: 1px solid #fff
+				border-radius: 50%
+				background-color: transparent
+				width: 12px
+				height: 12px
+				transition: 0.3s
+			&.slick-active
+				button
+					background-color: $mainC1
+
+
+.products
+	padding: 25px 40px
+	@include grid($s: 10px)
+	background-color: #fff
+	color: $mainC2
+	&-block
+		background-color: #f9f9f9
+		padding: 30px 85px 0
+	&__title
+		max-width: 171px
+	&-grid
+		.slick-arrow
+			color: #4d4d4d
+			&:hover
+				color: $mainC1
+		.slick-arrow.slick-prev
+			left: -10px
+		.slick-arrow.slick-next
+			right: 0
+		@include flex($jc: space-between, $ai: center)
+		&__image
+			@include flex($jc: center, $ai: center)
+			height: 270px
+			img
+				max-width: 100%
+				max-height: 100%
+		&__list
+			display: none
+		&__items
+			position: relative
+			padding: 30px 0
+			width: 100%
+			height: 375px
+			&-counter
+				display: none
+			&-title
+				font-family: Arial
+				font-weight: normal
+				font-size: 13px
+				color: #fff
+				background-color: #000
+				padding: 8px 15px
+				position: absolute
+				max-width: 100%
+			&-price
+				border-top: 2px solid rgb(220, 222, 221)
+				@include flex($jc: space-between, $ai: flex-end)
+				padding-top: 15px
+			&-text
+				font-family: Arial
+				font-weight: bold
+				font-size: 20px
+				span
+					color: #f44336
+				&_discount
+					text-decoration: line-through
+				&-mango
+					display: none
+
+		&__text
+			font-family: Arial
+			font-weight: normal
+			font-size: 16px
+			margin-top: 30px
+			max-width: 210px
+			&-mobile
+				display: none
+		&__basket
+			font-size: 18px
+			font-family: "BebasNeue"
+			font-weight: normal
+			text-transform: uppercase
+			color: #fff
+			background-color: $mainC1
+			padding: 10px 15px
+			border: 1px solid $mainC1
+			transition: .3s
+			&:before
+				font-family: "FontAwesome"
+				font-weight: 900
+				content: "\f291"
+				margin-right: 10px
+			&:hover
+				color: $mainC1
+				background-color: #fff
+
+.discount
+	position: absolute
+	background-color: #f44336
+	color: #fff
+	width: 52px
+	height: 52px
+	border-radius: 50px
+	font-family: Roboto
+	font-weight: 300
+	font-size: 11px
+	text-align: center
+	@include flex($jc: center, $ai: center)
+	flex-direction: column
+	top: 40px
+	right: 15px
+
+.brands
+	padding: 25px 40px
+	@include grid($s: 100px)
+	background-color: #fff
+	color: $mainC2
+	&-block
+		background-color: #f9f9f9
+		padding: 30px 85px 35px
+		border-bottom: 2px solid rgb(220, 222, 221)
+		position: relative
+	&__title
+		max-width: 235px
+	&-grid
+		@include flex($jc: center, $ai: center)
+		&__items
+			@include flex($jc: center, $ai: center)
+			img
+				max-width: 100%
+				max-height: 100%
+				filter: grayscale(1)
+				transition: .3s
+				&:hover
+					filter: grayscale(0)
+					cursor: pointer
+	&-line
+		border-bottom: 1px solid rgb(101, 105, 105)
+		position: absolute
+		bottom: 5px
+		left: 0
+		width: 100%
+
+.footer
+	background-color: #fff
+	color: $mainC2
+	padding: 25px 0
+	&-mobile
+		display: none
+		&-grid
+			@include flex($jc: center, $ai: center)
+			flex-direction: column
+			.contact-grid__pays
+				@include flex($jc: center, $ai: center)
+				flex-direction: column
+			.contact-grid__phone
+				font-size: 18px
+				color: $mainC1
+				border-bottom: 1px dashed $mainC1
+			.contact-grid__items
+				margin-top: 20px
+			.lowfooter__text
+				text-align: center
+				margin-top: 0
+			&__col
+				border-bottom: 1px solid $mainC3
+				padding: 25px 0
+				width: 100%
+				@include flex($jc: center, $ai: center)
+			&__nav
+				font-size: 20px
+				font-family: "BebasNeue"
+				font-weight: normal
+				text-transform: uppercase
+				color: #000
+				padding: 10px 0
+				@include flex($jc: space-between, $ai: center)
+				&:after
+					font-family: "FontAwesome"
+					font-weight: 900
+					content: "\f054"
+					color: $mainC1
+					font-size: 20px
+					margin-left: 10px
+			&__list
+				display: none
+			&__region
+				color: $mainC2
+				font-family: Verdana
+				font-weight: normal
+				font-size: 13px
+				display: flex
+
+.footer-mobile-grid__col:last-child
+	border-bottom: none
+	padding: 25px 0 10px
+
+.region
+	font-size: 15px
+	color: $mainC1
+	border-bottom: 1px dashed $mainC1
+	margin-left: 10px
+
+
+.contact
+	padding-bottom: 20px
+	&-grid
+		@include flex($jc: space-between, $ai: flex-start)
+		&__list
+			font-size: 18px
+			font-family: "BebasNeue"
+			font-weight: normal
+			text-transform: uppercase
+			li + li
+				margin-top: 10px
+			li
+				a:hover
+					color: $mainC1
+		&__contact-list
+			font-family: Arial
+			font-weight: normal
+			font-size: 14px
+			li + li
+				margin-top: 15px
+			li
+				a:hover
+					text-decoration: underline
+		&__phone
+			font-family: Arial
+			font-weight: normal
+			font-size: 18px
+			color: #000
+		&__worktime
+			font-family: Verdana
+			font-weight: normal
+			font-size: 12px
+			color: #a0a0a0
+			margin-top: 20px
+		&__button
+			margin-top: 30px
+		&__btn
+			display: block
+			border: 1px solid $mainC1
+			padding: 15px 20px
+			font-family: Arial
+			font-weight: normal
+			font-size: 14px
+			color: $mainC2
+			transition: .3s
+			&:hover
+				color: #fff
+				background-color: $mainC1
+		&__pay
+			font-family: Roboto
+			font-weight: 300
+			font-size: 16px
+			color: #5e5e5e
+			margin-bottom: 30px
+		&__payment
+			@include flex($jc: flex-start, $ai: center)
+			a + a
+				margin-left: 30px
+			img
+				display: block
+
+.logo
+	@include flex($jc: flex-start, $ai: flex-start)
+	&-text
+		color: #b2b2b2
+		font-family: Roboto
+		font-weight: normal
+		font-size: 9px
+		border: 1px solid #fea8c0
+		padding: 0 5px
+		margin-left: 3px
+
+.lowfooter__text
+	margin-top: 20px
+	color: #8e8e8e
+	font-family: Roboto
+	font-weight: normal
+	font-size: 12px
+	a
+		color: $mainC1
+		&:hover
+			text-decoration: underline
+
+
+// ============================
+// MAIN CODE END
+// ============================
+
+@for $i from 1 to length($mediaBp)
+	@media (max-width: nth($mediaBp, $i))
+		.container
+			max-width: nth($mediaBp, $i + 1)
+
+// ============================
+// MEDIA QUARIES
+// ============================
+@media (max-width: nth($mediaBp,1))
+
+	.header-grid__link
+		margin-left: 15px
+	.header-grid__worktime
+		margin-left: 15px
+
+	.nav-list li + li
+		margin-left: 30px
+
+@media (max-width: nth($mediaBp,2))
+	.preview-grid__title
+		font-size: 35px
+		top: calc(50% - 126px/2)
+		right: -80px
+
+	.brands
+		@include grid($s: 50px)
+		&-grid
+			@include flex($jc: center, $ai: center)
+
+	.header-grid__contacts
+		flex-direction: column
+		align-items: flex-start
+
+	.header-grid__link
+		margin-left: 0
+
+	.header-grid__worktime
+		display: none
+
+	.header-grid__link
+		color: $mainC1
+
+@media (max-width: nth($mediaBp,3))
+	.topheader
+		display: none
+	.header
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		background-color: #f9f9f9
+		padding: 10px 0
+		z-index: 50
+		border-bottom: 1px solid #656969
+		&-grid
+			padding: 0
+			justify-content: space-around
+			&__contacts
+				display: none
+				&-mobile
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					margin-left: 30px
+			&__col
+				width: auto
+			&__col:nth-child(2)
+				@include flex($jc: center, $ai: center)
+	.nav
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: -1
+		background-color: #f9f9f9
+		padding: 80px 0 40px
+		overflow: scroll
+			x: hidden
+			y: auto
+		visibility: hidden
+		opacity: 0
+		transition: .3s
+		&_active
+			opacity: 1
+			visibility: visible
+			z-index: 2
+		&_active &-list
+			transform: translate(0, 0)
+		&-list
+			flex-direction: column
+			align-items: center
+			transform: translate(0, 30px)
+			transition: .3s
+			li + li
+				margin: 0
+			&__link
+				display: block
+				font-size: 20px
+				line-height: 1.8
+				color: $mainC1
+				&:hover
+					text-decoration: underline
+
+	.nav-toggle
+		display: flex
+		z-index: 100
+
+	.preview-blocks
+		padding: 70px 0 0
+
+	.preview
+		padding: 0px 0px 25px
+		&-grid
+			&__title
+				right: -100px
+		&-block
+			padding: 30px 40px 0
+
+	.products-grid__text
+		max-width: 100%
+		&-mobile
+			display: block
+		&-hidden
+			display: none
+
+
+	.contact-grid
+		flex-wrap: wrap
+		&__col
+			width: calc(100%/3)
+		&__worktime
+			margin-top: 10px
+
+	.contact-grid__col:nth-child(4), .contact-grid__col:nth-child(5)
+		width: 50%
+		margin-top: 35px
+
+	.contact-grid__col:nth-child(4)
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	.contact-grid__col:nth-child(5)
+		@include flex($jc: flex-end, $ai: flex-end)
+
+	.contact-grid__button
+		margin-top: 0
+
+@media (max-width: nth($mediaBp,4))
+
+	.header-grid__phone
+		font-size: 15px
+	.header-grid__link
+		font-size: 12px
+	.header-grid__text
+		display: none
+
+	.preview
+		&-grid
+			&__img
+				display: none
+				&-mobile
+					display: block
+			&__title
+				font-size: 40px
+				right: -35px
+				top: calc(50% - 144px/2)
+
+	.products-block
+		padding: 30px 0px 0
+	.preview-block
+		padding: 85px 0 0
+
+	.preview-blocks
+		padding: 0
+
+	.slick-arrow.slick-prev
+		left: 25px
+
+	.slick-arrow.slick-next
+		right: 40px
+
+	.slick-arrow
+		top: 55%
+
+	.products
+		&-grid
+			flex-wrap: wrap
+			&__col
+				width: 50%
+				@include flex($jc: center, $ai: center)
+				&-line
+					border-top: 1px solid $mainC3
+				&-hidden
+					display: none
+				&-mobile
+					.discount
+						display: none
+			&__text
+				font-size: 15px
+			&__list
+				display: flex
+				flex-direction: column
+				font-family: Arial
+				font-weight: normal
+				font-size: 13px
+				color: #a0a0a0
+				margin-top: 30px
+				&-brand
+					color: $mainC2
+					width: 62px
+				li
+					@include flex($jc: space-between, $ai: center)
+				li + li
+					margin-top: 10px
+			&__items
+				height: 100%
+				&-counter
+					@include flex($jc: space-between, $ai: center)
+					color: #a0a0a0
+					font-family: Arial
+					font-weight: normal
+					font-size: 13px
+					border-top: 2px solid rgb(220, 222, 221)
+					padding-top: 15px
+				&-count
+					@include flex($jc: space-between, $ai: center)
+					border: 1px solid $mainC3
+					padding: 10px
+					width: 80px
+					font-family: Verdana
+					font-weight: normal
+					font-size: 14px
+					color: $mainC2
+					&_border
+						border-left: 1px solid $mainC3
+						border-right: 1px solid $mainC3
+						padding: 0 7px
+
+				&-price
+					border: none
+					align-items: center
+					margin-bottom: 15px
+				&-text
+					&_discount
+						display: none
+						&-mango
+							text-decoration: line-through
+					&-mobile
+						display: none
+					&-mango
+						display: block
+						&-disc
+							color: #f44336
+					span
+						color: #000
+
+	.brands-block
+		padding: 30px 0px 35px
+
+	.contact
+		&-grid
+			&__list
+				li + li
+					margin-bottom: 6px
+			&__phone
+				font-size: 16px
+			&__worktime
+				margin-top: 5px
+	
+@media (max-width: nth($mediaBp,5))
+
+	.header
+		&-grid
+			&__contacts
+				&-mobile
+					display: none
+			&__items:nth-child(2)
+				display: none
+
+	.preview
+		padding: 30px 0px 25px
+		background-color: #dbe0e3
+		&-block
+			padding: 85px 0 30px
+		&-grid
+			&__title
+				font-size: 25px
+				max-width: 160px
+				right: 60px
+				top: calc(50% - 120px/2)
+
+	.slick-arrow.slick-next
+		right: 15px
+	.slick-arrow.slick-prev
+		left: 0
+
+	.title
+		line-height: 35px
+
+	.products
+		&-grid
+			flex-direction: column-reverse
+			&__col
+				width: 100%
+				border-top: 1px solid $mainC3
+				&-width
+					width: 80%
+				&-line
+					border-bottom: none
+
+	.products
+		&-grid__col:nth-child(5)
+			border-top: none
+
+	.brands
+		@include grid($s: 0px)
+		padding: 20px 0 0
+		&-grid
+			flex-direction: column
+	.line
+		margin-bottom: 40px
+
+	.lowfooter, .contact
+		display: none
+
+	.footer-mobile
+		display: flex
+
+	.footer
+		padding: 25px 0 0
+
+	
+
+@media (max-width: nth($mediaBp,6))
+
+	.title
+		font-size: 18px
+
+	.preview
+		&-grid
+			&__img-mobile
+				height: 165px
+				width: 100%
+			&__title
+				right: 40px
+
+	.brands
+		padding: 25px 0px
+
+	.products
+		padding: 25px 0
+		&-grid
+			&__text
+				margin-top: 10px
+			&__image
+				height: 100%
+			&__col
+				&-width
+					width: 100%
+			&__list
+				margin-top: 10px
+			&__items
+				padding: 15px 0
+	
+
+
